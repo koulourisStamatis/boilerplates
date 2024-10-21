@@ -25,7 +25,7 @@ Grafana is used to visualize the metrics scraped by Prometheus and other sources
   - `grafana-data:/var/lib/grafana`: Named volume to store Grafana dashboards and configurations.
 
 Access Grafana at [http://localhost:3000](http://localhost:3000). Default login credentials are `admin/admin`.
-
+Import template 1860
 ### 3. **Node Exporter**
 Node Exporter collects hardware and OS metrics from the host system, such as CPU, memory, and disk usage.
 
