@@ -1,6 +1,6 @@
 # Prometheus Docker Compose Setup
-https://prometheus.io/
-This setup uses Docker Compose to run **Prometheus** for collecting and querying metrics.
+
+This setup uses Docker Compose to run **Prometheus** for collecting and querying metrics. For more information about Prometheus, visit the official website: [https://prometheus.io/](https://prometheus.io/).
 
 ## Prerequisites
 
