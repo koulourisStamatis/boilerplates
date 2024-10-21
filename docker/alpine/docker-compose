@@ -1,0 +1,7 @@
+version: '3.8'
+alpine:
+  image: alpine:latest
+  container_name: alpine
+  command: ["/bin/sh"]  # Start an interactive shell
+  tty: true  # Keep the container running
+  restart: unless-stopped

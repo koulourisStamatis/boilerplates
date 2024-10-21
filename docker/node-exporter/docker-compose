@@ -1,0 +1,13 @@
+version: '3.8'
+node_exporter:
+    image: quay.io/prometheus/node-exporter:v1.8.2
+    container_name: node_exporter
+    restart: unless-stopped
+    ports:
+      - "9100:9100"  # Expose node_exporter on port 9100
+    command:
+      - "--path.rootfs=/host"  # Set rootfs to a mounted volume
+    pid: host
+    volumes:
+      - /proc:/host/proc:ro  # Mount /proc for host metrics
+      - /sys:/host/sys:ro  # Mount /sys for host metrics

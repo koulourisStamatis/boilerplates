@@ -1,0 +1,14 @@
+ version: '3.8'
+ cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.50.0
+    container_name: cadvisor
+    ports:
+      - "8080:8080"
+    volumes:
+      - /var/run:/var/run:ro  # Necessary run files
+      - /sys:/sys:ro  # System metrics
+      - /var/lib/docker/:/var/lib/docker:ro  # Docker storage
+    devices:
+      - /dev/kmsg  # Required for cAdvisor to function correctly
+    privileged: true  # Required for cAdvisor to access host metrics
+    restart: unless-stopped
